@@ -137,6 +137,9 @@ export default {
   },
   methods: {
     uploadGeneData(file, fileList) {
+      if (fileList.length > 1) {
+        fileList.splice(0, 1);
+      }
       this.disabled = false;
       this.outputText = "";
 
