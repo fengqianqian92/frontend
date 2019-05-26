@@ -70,6 +70,8 @@
         action
         :on-change="uploadGeneData"
         :auto-upload="false"
+        :multiple="false"
+        accept=".txt"
       >
         <i class="el-icon-upload"></i>
         <div class="el-upload__text">
@@ -134,7 +136,7 @@ export default {
     };
   },
   methods: {
-    uploadGeneData(file) {
+    uploadGeneData(file, fileList) {
       this.disabled = false;
       this.outputText = "";
 
@@ -180,7 +182,8 @@ export default {
   padding-bottom: 0;
   padding-left: 4px;
 }
-#preview-text, #result-text {
-    color: black; 
+#preview-text,
+#result-text {
+  color: black;
 }
 </style>
